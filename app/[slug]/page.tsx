@@ -1,0 +1,171 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Footer, Header } from "../page";
+
+const NEXT_STEP = "https://stan.store/brightspiralliteracy";
+const STAN_STORE = "https://stan.store/brightspiralliteracy";
+
+type PageData = {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  color: string;
+  sections: { title: string; body: string; items?: string[] }[];
+  cta: string;
+};
+
+const pages: Record<string, PageData> = {
+  "start-here": {
+    eyebrow: "Start here",
+    title: "What kind of support does your family need?",
+    intro: "You do not need to understand every literacy term before taking the next step. Start with the question closest to yours.",
+    color: "yellow",
+    sections: [
+      { title: "“I need to understand why reading feels hard.”", body: "The Reading Instruction Blueprint brings together evidence, context, and professional interpretation. You leave with ordered instructional priorities.", items: ["Best first step when progress has stalled", "Designed for international and multilingual families", "Investment: €1,200"] },
+      { title: "“We already know what needs teaching.”", body: "Reading Turnaround puts the Blueprint into practice through individualized specialist instruction.", items: ["Custom engagement from €2,200", "Focused on the skills which matter now", "Progress you understand and track"] },
+      { title: "“I want guidance before assessment.”", body: "The Parent Reading Room gives international school parents a trusted place to learn, ask questions, and make more confident literacy decisions.", items: ["Live Q&A and short trainings", "Practical home support", "$39 per month"] },
+    ],
+    cta: "Explore the Blueprint",
+  },
+  "reading-turnaround": {
+    eyebrow: "Reading Turnaround",
+    title: "A roadmap is useful when it changes what happens next.",
+    intro: "Reading Turnaround implements your child’s Instruction Blueprint through private specialist instruction.",
+    color: "dark",
+    sections: [
+      { title: "The Blueprint determines the path", body: "Families do not shop between generic intervention packages. Dr. Jenn recommends the scope, sequence, frequency, and duration from your child’s Instruction Blueprint.", items: ["Separate custom engagement from €2,200", "€1,200 Reading Instruction Blueprint required first", "Clear goals and progress indicators"] },
+      { title: "Find the friction", body: "Identify the point where accurate, confident reading begins to break down." },
+      { title: "Teach what is missing", body: "Target the highest-priority skill in a deliberate instructional sequence." },
+      { title: "Measure the change", body: "Look for new learning in unfamiliar words, books, and schoolwork." },
+      { title: "Make reading theirs", body: "Move toward stronger skill, growing independence, and a child who trusts their own reading." },
+    ],
+    cta: "Start with the Blueprint",
+  },
+  "parent-reading-room": {
+    eyebrow: "The Parent Reading Room",
+    title: "Helping your child read should feel less overwhelming.",
+    intro: "A private community where international school parents get trusted guidance, practical support, and a place to ask their real questions.",
+    color: "yellow",
+    sections: [
+      { title: "Become a confident literacy decision-maker", body: "You do not need to become your child’s reading teacher. You need to know what matters, what does not, and when to ask for more support." },
+      { title: "Inside the Room", body: "Everything is designed to help you make better decisions and support reading without turning home into another classroom.", items: ["Live parent Q&A sessions", "Short, practical trainings", "Monthly text sets", "Book and resource recommendations", "Support for school conversations", "An international parent community"] },
+      { title: "A place to connect, not another course to finish", body: "Ask questions as they arise. Learn from other families. Return to the resources when you need them. Membership is $39 per month." },
+      { title: "Where it fits", body: "The Parent Reading Room supports families who want ongoing guidance. It does not replace an individual assessment or intervention when a child needs personalized support." },
+    ],
+    cta: "Join The Parent Reading Room",
+  },
+  about: {
+    eyebrow: "About Dr. Jenn",
+    title: "I have spent more than 15 years paying attention to how children learn.",
+    intro: "When something works for a child, I pay attention. When it does not, I pay attention to that too. Then I return to the research to understand why.",
+    color: "blue",
+    sections: [
+      { title: "From classrooms to leadership, and back again", body: "Dr. Jenn’s work spans classroom teaching, instructional coaching, school leadership, university teaching, assessment, and international education. She returned to the classroom because the best literacy thinking stays close to real children." },
+      { title: "Why Bright Spiral exists", body: "Across countries and school systems, families kept asking the same questions. Why is reading hard for my child? Should we wait? What kind of help will make a difference? Bright Spiral was built to give those families clearer answers." },
+      { title: "Expertise without distance", body: "Parents deserve plain language, honest interpretation, and practical next steps. They should leave a conversation feeling more capable, not more confused." },
+    ],
+    cta: "Read the Bright Spiral Standard",
+  },
+  standard: {
+    eyebrow: "The Bright Spiral Standard",
+    title: "Every decision should protect possibility.",
+    intro: "The Standard guides every assessment, recommendation, lesson, report, product, partnership, and conversation.",
+    color: "dark",
+    sections: [
+      { title: "Literacy protects possibility", body: "Reading gives children access to learning, independence, communication, and opportunity. Our work should expand those possibilities." },
+      { title: "Science guides us. Children lead us.", body: "Research informs our decisions. Assessment strengthens our understanding. Professional judgment helps us apply both without losing sight of the child." },
+      { title: "Context creates clarity", body: "Language, instruction, mobility, culture, confidence, and opportunity all shape a child’s reading story. We seek understanding before judgment." },
+      { title: "Assessment creates understanding", body: "Every assessment should explain what is working, what is getting in the way, and what should happen next." },
+      { title: "Clarity creates action", body: "A recommendation should be practical, personalized, and connected to the child in front of us." },
+      { title: "Partnership creates progress", body: "Parents know their child. Teachers know the classroom. Specialists contribute targeted expertise. Children benefit when those perspectives move in the same direction." },
+    ],
+    cta: "Find your next step",
+  },
+  resources: {
+    eyebrow: "The Bright Spiral Journal",
+    title: "Clear thinking for families raising readers.",
+    intro: "Research-informed ideas about reading, writing, multilingual learning, assessment, and supporting literacy at home.",
+    color: "yellow",
+    sections: [
+      { title: "Why reading difficulties have explanations", body: "A child who avoids reading is communicating something. The useful question is not how to make them comply. It is where the effort begins to outweigh the reward." },
+      { title: "Is it a language difference or a reading difficulty?", body: "For multilingual children, the answer requires more than one score. Language history, instruction, patterns across languages, and opportunities to learn all matter." },
+      { title: "What to do when tutoring is not improving reading", body: "More practice will not solve an unidentified problem. Before adding hours, ask what skill is being taught, why it was selected, and how progress will be measured." },
+      { title: "What protecting possibility means", body: "Literacy matters beyond school performance. Reading gives children more ways to learn, question, communicate, and participate in the world." },
+    ],
+    cta: "Explore the Blueprint",
+  },
+  contact: {
+    eyebrow: "Contact Bright Spiral",
+    title: "Tell us what is happening with reading.",
+    intro: "Share the question which brought you here. We will point you toward the most appropriate next step.",
+    color: "blue",
+    sections: [
+      { title: "For family questions", body: "Email jenn@brightspiralliteracy.com with your child’s age, school context, and the reading concern you want to understand." },
+      { title: "For brand partnerships", body: "Have a book, tool, or service that would benefit international school families? Tell us who it serves, what problem it solves, and why it fits the Bright Spiral community." },
+      { title: "A useful first message", body: "You do not need to send every report immediately. Start with what you have noticed, what the school has shared, and what you have already tried." },
+    ],
+    cta: "Email Dr. Jenn",
+  },
+  faq: {
+    eyebrow: "Common questions",
+    title: "A clearer answer starts here.",
+    intro: "Straight answers about assessment, multilingual learners, online sessions, and what happens next.",
+    color: "yellow",
+    sections: [
+      { title: "Does the Reading Instruction Blueprint provide a diagnosis?", body: "No. It is an instructional decision process. It explains reading strengths, learning gaps, and recommended next steps." },
+      { title: "Is this appropriate for multilingual children?", body: "Yes. Language and educational history form part of the assessment context from the beginning." },
+      { title: "How do online assessment sessions work?", body: "Your child meets individually with Dr. Jenn for two 45-minute sessions. You receive preparation guidance before the first meeting." },
+      { title: "Do we need the Blueprint before Reading Turnaround?", body: "Yes. The Blueprint determines the most appropriate intervention scope and priorities." },
+      { title: "Does the Parent Reading Room replace individual support?", body: "No. It provides parent education and community. Individual concerns requiring personalized review begin with the Reading Instruction Blueprint." },
+    ],
+    cta: "Book the Blueprint",
+  },
+};
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const page = pages[slug];
+  return page ? { title: page.eyebrow, description: page.intro } : {};
+}
+
+export function generateStaticParams() {
+  return Object.keys(pages).map((slug) => ({ slug }));
+}
+
+export default async function ContentPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const page = pages[slug] ?? pages["start-here"];
+  const target = page.cta.includes("Parent")
+    ? STAN_STORE
+    : page.cta.includes("Standard")
+      ? "/standard"
+      : page.cta.includes("Email")
+        ? "mailto:jenn@brightspiralliteracy.com"
+        : NEXT_STEP;
+  return (
+    <>
+      <Header />
+      <main className={`inner-page theme-${page.color}`} id="main-content">
+        <section className="inner-hero">
+          <p className="eyebrow">{page.eyebrow}</p>
+          <h1>{page.title}</h1>
+          <p>{page.intro}</p>
+          <Link className="button" href={target}>{page.cta} <span>↗</span></Link>
+        </section>
+        <section className="inner-content">
+          {page.sections.map((section, i) => (
+            <article key={section.title}>
+              <span className="section-number">{String(i + 1).padStart(2, "0")}</span>
+              <div><h2>{section.title}</h2><p>{section.body}</p>{section.items && <ul>{section.items.map((item) => <li key={item}>{item}</li>)}</ul>}</div>
+            </article>
+          ))}
+        </section>
+        <section className="inner-final">
+          <h2>Clarity changes what happens next.</h2>
+          <Link className="button button-yellow" href={target}>{page.cta} <span>↗</span></Link>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}
