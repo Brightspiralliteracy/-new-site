@@ -31,7 +31,11 @@ export default function PrivateAdvisory() {
             location: String(data.get("location") ?? ""),
             school: String(data.get("school") ?? ""),
             team: String(data.get("team") ?? ""),
+            decisions: String(data.get("decisions") ?? ""),
+            outcome: String(data.get("outcome") ?? ""),
             involvement: String(data.get("involvement") ?? ""),
+            start: String(data.get("start") ?? ""),
+            decisionMakers: String(data.get("decisionMakers") ?? ""),
             context: String(data.get("context") ?? ""),
           },
         }),
@@ -54,9 +58,9 @@ export default function PrivateAdvisory() {
           <div>
             <p className="eyebrow light">The Bright Spiral Private Advisory</p>
             <h1>One trusted literacy advisor for your family.</h1>
-            <p>For a limited number of international families, Dr. Jenn provides private, ongoing literacy guidance across home, school, tutors, specialists, and transitions.</p>
+            <p>For a limited number of international families, Dr. Jenn provides ongoing literacy strategy across home, school, tutors, specialists, and international transitions.</p>
           </div>
-          <aside><span>Limited availability</span><strong>Private proposal</strong><p>Each relationship is designed around the child, the school context, and the level of access your family requires.</p></aside>
+          <aside><span>Limited availability</span><strong>Private proposal</strong><p>Your proposal defines the decisions, access, coordination, and support included in the relationship.</p></aside>
         </section>
 
         <section className="advisory-role">
@@ -68,10 +72,40 @@ export default function PrivateAdvisory() {
           <p className="eyebrow light">Designed around your family</p>
           <h2>Private access. Ongoing judgment. Coordinated decisions.</h2>
           <div>
-            <article><span>01</span><h3>Interpret</h3><p>Reading data, school reports, assessments, and new concerns are reviewed in context.</p></article>
-            <article><span>02</span><h3>Advise</h3><p>Your family receives direct guidance on instruction, providers, programs, and next steps.</p></article>
-            <article><span>03</span><h3>Coordinate</h3><p>Dr. Jenn communicates with teachers, tutors, and specialists when alignment matters.</p></article>
-            <article><span>04</span><h3>Stay close</h3><p>Priority access and regular reviews keep decisions responsive as needs change.</p></article>
+            <article><span>01</span><h3>Interpret</h3><p>Dr. Jenn reviews reading data, school reports, assessments, and new concerns in context.</p></article>
+            <article><span>02</span><h3>Advise</h3><p>Your family receives direct guidance on instruction, providers, programs, and next decisions.</p></article>
+            <article><span>03</span><h3>Coordinate</h3><p>Dr. Jenn communicates with teachers, tutors, and specialists when the proposal includes coordination.</p></article>
+            <article><span>04</span><h3>Stay close</h3><p>Regular strategy reviews and agreed priority access keep decisions responsive as needs change.</p></article>
+          </div>
+        </section>
+
+        <section className="advisory-boundaries">
+          <div>
+            <p className="eyebrow">A defined private relationship</p>
+            <h2>High-touch support works when everyone knows the scope.</h2>
+          </div>
+          <div className="advisory-boundary-grid">
+            <article>
+              <h3>Your proposal defines</h3>
+              <ul>
+                <li>Strategy-review schedule</li>
+                <li>Report and data interpretation</li>
+                <li>School, tutor, or specialist coordination</li>
+                <li>Priority communication access</li>
+                <li>Transition support</li>
+                <li>Private instruction when included</li>
+              </ul>
+            </article>
+            <article>
+              <h3>The Advisory is not</h3>
+              <ul>
+                <li>A one-off question or report review</li>
+                <li>An open-ended tutoring package</li>
+                <li>Unlimited messaging or emergency support</li>
+                <li>A medical or psychological diagnosis</li>
+                <li>Work outside the agreed private proposal</li>
+              </ul>
+            </article>
           </div>
         </section>
 
@@ -103,10 +137,25 @@ export default function PrivateAdvisory() {
                 <option>A complete, custom relationship</option>
               </select>
             </label>
-            <label>Why are you seeking private advisory now?<textarea name="why" required rows={4} /></label>
-            <label>How involved would you like Dr. Jenn to be?<textarea name="involvement" required rows={4} /></label>
+            <label>What is happening now, and why are you seeking private advisory?<textarea name="why" required rows={4} /></label>
+            <label>Which literacy decisions feel hardest for your family right now?<textarea name="decisions" required rows={4} /></label>
+            <label>What outcome would make this relationship valuable over the next 6 to 12 months?<textarea name="outcome" required rows={4} /></label>
+            <label>How involved would you like Dr. Jenn to be with your family, school, and current support team?<textarea name="involvement" required rows={4} /></label>
+            <div className="form-row">
+              <label>When would you like support to begin?
+                <select name="start" required defaultValue="">
+                  <option value="" disabled>Choose a timeframe</option>
+                  <option>As soon as an opening is available</option>
+                  <option>Within the next 1 to 3 months</option>
+                  <option>Before an upcoming school transition</option>
+                  <option>I am planning ahead</option>
+                </select>
+              </label>
+              <label>Who will participate in decisions and communication?<textarea name="decisionMakers" required rows={3} /></label>
+            </div>
             <label>Anything else Dr. Jenn should understand?<textarea name="context" rows={4} /></label>
-            <label className="form-consent"><input type="checkbox" required /> I understand Private Advisory is limited and offered through a custom private proposal.</label>
+            <label className="form-consent"><input type="checkbox" required /> I understand Private Advisory is an ongoing, custom relationship rather than a one-off consultation or standard tutoring package.</label>
+            <label className="form-consent"><input type="checkbox" required /> I understand availability is limited and the scope and investment are presented through a private proposal.</label>
             <p className="form-privacy">By applying, you agree to our <Link href="/privacy">Privacy Policy</Link>.</p>
             <button className="button" type="submit" disabled={status === "sending"}>{status === "sending" ? "Sending..." : "Submit private application"} <span>↗</span></button>
             <div aria-live="polite">
