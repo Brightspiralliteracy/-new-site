@@ -1,8 +1,9 @@
 import Link from "next/link";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
-const NEXT_STEP = "https://stan.store/brightspiralliteracy";
+const NEXT_STEP = "/start-here";
 const STAN_STORE = "https://stan.store/brightspiralliteracy";
+const CLARITY_CALL = "https://stan.store/brightspiralliteracy/p/reading-clarity-call";
 
 const Mark = () => (
   <span className="mark" aria-hidden="true">
@@ -55,7 +56,7 @@ export function Footer() {
           <p>Literacy support designed for international school families.</p>
         </div>
         <div className="footer-links">
-          <div><b>Explore</b><Link href="/start-here">Start here</Link><Link href="/services">Ways to work together</Link><Link href="/reading-instruction-blueprint">Reading Instruction Blueprint</Link><Link href="/reading-turnaround">Reading Turnaround</Link><Link href={STAN_STORE}>Parent Reading Room</Link><Link href="/private-advisory">Private Advisory</Link></div>
+          <div><b>Explore</b><Link href="/start-here">Start here</Link><Link href="/services">Ways to work together</Link><Link href="/reading-clarity-blueprint">Reading Clarity Blueprint</Link><Link href="/reading-turnaround">Reading Turnaround</Link><Link href={STAN_STORE}>Parent Reading Room</Link><Link href="/private-advisory">Private Advisory</Link></div>
           <div><b>Company</b><Link href="/about">About Dr. Jenn</Link><Link href="/standard">Our Standard</Link><Link href="/resources">Resources</Link><Link href="/contact">Contact</Link></div>
         </div>
       </div>
@@ -92,7 +93,7 @@ export default function Home() {
             </div>
             <div className="hero-proof">
               <span>15+ years in education</span>
-              <span>International school expertise</span>
+              <span>International school teacher and leader experience</span>
               <span>Evidence-informed</span>
             </div>
           </div>
@@ -115,8 +116,8 @@ export default function Home() {
             <h2>Expert interpretation, grounded in real classrooms.</h2>
           </div>
           <div>
-            <p className="founder-credentials">PhD · M.Ed. · 15+ years in education</p>
-            <p>Dr. Jennifer Overstreet has worked across classroom teaching, school leadership, instructional coaching, and university teaching in the United States, Italy, and the Middle East.</p>
+            <p className="founder-credentials">PhD · M.S. in Educational Leadership · 15+ years in education</p>
+            <p>Dr. Jennifer Overstreet brings more than 15 years of international school teacher and leader experience across classroom teaching, school leadership, instructional coaching, and university teaching in the United States, Italy, and the Middle East.</p>
             <Link className="text-link" href="/about">Meet Dr. Jenn <span>→</span></Link>
           </div>
         </section>
@@ -124,10 +125,10 @@ export default function Home() {
         <section className="clarity-feature">
           <div className="clarity-card">
             <div className="card-top"><span>01</span><span>Flagship experience</span></div>
-            <h2>Reading Instruction Blueprint</h2>
+            <h2>Reading Clarity Blueprint</h2>
             <p>A complete instructional decision process for families who need to know how their child reads and what should happen next.</p>
             <div className="price">€1,200 <small>one-time investment</small></div>
-            <Link className="button button-yellow" href={NEXT_STEP}>Explore the Blueprint <Arrow /></Link>
+            <Link className="button button-yellow" href="/reading-clarity-blueprint">Explore the Blueprint <Arrow /></Link>
           </div>
           <div className="clarity-copy">
             <p className="eyebrow">From uncertainty to a clear plan</p>
@@ -135,10 +136,11 @@ export default function Home() {
             <p>Dr. Jenn brings the evidence, the reading itself, and your child’s educational and language history into one coherent instructional picture.</p>
             <ul className="check-list">
               <li>Two individual assessment sessions</li>
-              <li>A parent-friendly Instruction Blueprint</li>
+              <li>A parent-friendly Reading Profile</li>
+              <li>A Personalized Eight-Week Reading Support Plan</li>
               <li>A consultation with Dr. Jenn</li>
               <li>Priorities organized by first, next, and later</li>
-              <li>A summary to share with your child’s school</li>
+              <li>A one-page teacher summary</li>
             </ul>
           </div>
         </section>
@@ -158,10 +160,10 @@ export default function Home() {
         </section>
 
         <section className="international">
-          <div className="map-art" aria-hidden="true">
-            <span className="dot d1" /><span className="dot d2" /><span className="dot d3" />
-            <i className="route r1" /><i className="route r2" />
-            <div className="stacked-books"><b>HOME</b><b>SCHOOL</b><b>LANGUAGE</b></div>
+          <div className="context-visual">
+            <img className="context-main-photo" src="/images/dr-jenn-teaching.webp" alt="Dr. Jenn teaching elementary students in an international school classroom" />
+            <img className="context-detail-photo" src="/images/student-writing.webp" alt="A child sharing letter and sound work during a literacy lesson" />
+            <p>One child. More than one source of evidence.</p>
           </div>
           <div>
             <p className="eyebrow">International by design</p>
@@ -179,9 +181,9 @@ export default function Home() {
           </div>
           <div className="founder-copy">
             <p className="eyebrow">Meet Dr. Jenn</p>
-            <h2>“When something works for a child, I pay attention. When it doesn’t, I pay attention to that too.”</h2>
-            <p className="founder-credentials">PhD · M.Ed. · 15+ years in education</p>
-            <p>Dr. Jennifer Overstreet’s work spans classroom teaching, school leadership, instructional coaching, and university teaching across the United States, Italy, and the Middle East.</p>
+            <h2>The best literacy decisions begin with close attention to the child and the evidence.</h2>
+            <p className="founder-credentials">PhD · M.S. in Educational Leadership · 15+ years in education</p>
+            <p>Dr. Jennifer Overstreet brings international school teacher and leader experience across classroom teaching, school leadership, instructional coaching, and university teaching in the United States, Italy, and the Middle East.</p>
             <p>She returned to the classroom because literacy ideas should remain connected to real children and how they learn.</p>
             <Link className="text-link" href="/about">More about Dr. Jenn <span>→</span></Link>
           </div>
@@ -200,7 +202,7 @@ export default function Home() {
           <div className="proof-grid">
             <blockquote>
               <p>“You are magic when it comes to teaching reading!”</p>
-              <cite>Grade 1 parent</cite>
+              <cite>Grade 1 grandfather</cite>
             </blockquote>
             <blockquote>
               <p>“He has had so much fun during his lessons and said that he cannot wait for his lesson tomorrow.”</p>
@@ -209,6 +211,14 @@ export default function Home() {
             <blockquote>
               <p>“I am reading Wonder at home and a book about Egypt at school. I like reading. It takes me to a new world.”</p>
               <cite>Grade 5 student</cite>
+            </blockquote>
+            <blockquote>
+              <p>“My child has gone from being a resistant reader, to reading a book a day, to reading any chance she gets.”</p>
+              <cite>Parent</cite>
+            </blockquote>
+            <blockquote>
+              <p>“Since working with Jenn, his confidence is 10X.”</p>
+              <cite>Parent</cite>
             </blockquote>
           </div>
           <div className="proof-story">
@@ -236,7 +246,7 @@ export default function Home() {
           </div>
           <div className="path-grid">
             <article className="path-blue"><span>01</span><h3>I have questions and want trusted guidance.</h3><p>Learn what matters, ask better questions, and get support between school meetings.</p><Link href={STAN_STORE}>The Parent Reading Room <Arrow /></Link></article>
-            <article className="path-yellow"><span>02</span><h3>I need to know what my child needs.</h3><p>Understand how your child reads and which instruction belongs first, next, and later.</p><Link href="/reading-instruction-blueprint">Reading Instruction Blueprint <Arrow /></Link></article>
+            <article className="path-yellow"><span>02</span><h3>I need to know what my child needs.</h3><p>Understand how your child reads and which instruction belongs first, next, and later.</p><Link href="/reading-clarity-blueprint">Reading Clarity Blueprint <Arrow /></Link></article>
             <article className="path-cream"><span>03</span><h3>I want Dr. Jenn to teach my child.</h3><p>Move from understanding the problem to focused teaching and measurable progress.</p><Link href="/reading-turnaround">Reading Turnaround <Arrow /></Link></article>
           </div>
         </section>
@@ -258,7 +268,7 @@ export default function Home() {
 
         <section className="final-cta">
           <div><p className="eyebrow light">Your next step</p><h2>You do not need another opinion.<br />You need a clear path forward.</h2></div>
-          <Link className="button button-yellow" href={NEXT_STEP}>Choose your next step <Arrow /></Link>
+          <Link className="button button-yellow" href={CLARITY_CALL}>Book a Reading Clarity Call <Arrow /></Link>
         </section>
       </main>
       <Footer />
