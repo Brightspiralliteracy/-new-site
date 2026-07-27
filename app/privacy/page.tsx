@@ -15,7 +15,7 @@ export default function Privacy() {
         <header><p className="eyebrow">Last updated 26 July 2026</p><h1>Privacy Policy</h1><p>Bright Spiral Literacy respects your family’s privacy. This policy explains what we collect through this website and why.</p></header>
         <article>
           <h2>Who is responsible for your information</h2>
-          <p>Bright Spiral Literacy, operated by Dr. Jennifer Overstreet in Rome, Italy, is the data controller for information submitted through this website. Contact: <a href="mailto:jenn@brightspiralliteracy.com">jenn@brightspiralliteracy.com</a>.</p>
+          <p>Bright Spiral Literacy, operated by Dr. Jennifer Overstreet in Rome, Italy, is the data controller for information submitted through this website. Contact: <a href="mailto:hello@brightspiralliteracy.com">hello@brightspiralliteracy.com</a>.</p>
 
           <h2>Information we collect</h2>
           <p>Inquiry and application forms collect the information you choose to provide, including your name, email, your child’s age or school year, school context, languages, reading concerns, and support requested.</p>
@@ -43,7 +43,7 @@ export default function Privacy() {
           <p>Some service providers process data outside Italy or the European Economic Area. We select established providers and rely on their published safeguards and contractual transfer mechanisms.</p>
 
           <h2>Your rights</h2>
-          <p>Depending on applicable law, you may request access, correction, deletion, restriction, portability, or objection. You may withdraw marketing consent at any time. Email <a href="mailto:jenn@brightspiralliteracy.com">jenn@brightspiralliteracy.com</a>. You also have the right to contact your local data protection authority.</p>
+          <p>Depending on applicable law, you may request access, correction, deletion, restriction, portability, or objection. You may withdraw marketing consent at any time. Email <a href="mailto:hello@brightspiralliteracy.com">hello@brightspiralliteracy.com</a>. You also have the right to contact your local data protection authority.</p>
 
           <h2>Children’s information</h2>
           <p>Parents and guardians submit website inquiries. Children should not submit forms directly. Bright Spiral collects child-related information only to understand a parent’s request and deliver agreed services.</p>
