@@ -111,7 +111,7 @@ export default function PrivateAdvisory() {
             <button className="button" type="submit" disabled={status === "sending"}>{status === "sending" ? "Sending..." : "Submit private application"} <span>↗</span></button>
             <div aria-live="polite">
               {status === "sent" && <p className="form-status form-success">Thank you. Your application is safely recorded. Dr. Jenn will review it and reply by email.</p>}
-              {status === "error" && <p className="form-status form-error">{error} You may also email <a href="mailto:jenn@brightspiralliteracy.com">jenn@brightspiralliteracy.com</a>.</p>}
+              {status === "error" && <p className="form-status form-error">{error} You may also email <a href="mailto:hello@brightspiralliteracy.com">hello@brightspiralliteracy.com</a>.</p>}
             </div>
           </form>
         </section>
