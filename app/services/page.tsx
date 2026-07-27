@@ -8,7 +8,6 @@ export const metadata: Metadata = {
 };
 
 const CLARITY_CALL = "https://stan.store/brightspiralliteracy/p/reading-clarity-call";
-const ROOM = "https://stan.store/brightspiralliteracy";
 
 export default function Services() {
   return (
@@ -27,9 +26,9 @@ export default function Services() {
             <p className="eyebrow">Learn and ask</p>
             <h2>The Parent Reading Room</h2>
             <p className="parent-thought">“I have questions and want trusted guidance.”</p>
-            <p>A membership for international school parents who want practical literacy guidance, live support, and a place to ask questions.</p>
+            <p>Learn what matters, know what to ask the school, and get practical guidance without turning yourself into your child’s tutor.</p>
             <div className="offer-price">$39 <small>per month</small></div>
-            <Link className="button" href={ROOM}>Explore the Room <span>↗</span></Link>
+            <Link className="button" href="/parent-reading-room">Explore the Room <span>→</span></Link>
           </article>
 
           <article className="offer-blueprint">
