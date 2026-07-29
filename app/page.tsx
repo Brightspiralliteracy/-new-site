@@ -7,9 +7,17 @@ const CLARITY_CALL = "https://stan.store/brightspiralliteracy/p/reading-clarity-
 
 const Mark = () => (
   <span className="mark" aria-hidden="true">
-    <i />
-    <i />
-    <i />
+    <svg viewBox="0 0 48 48" role="presentation" focusable="false">
+      <path
+        className="mark-letter"
+        d="M11 6v36h13c10 0 16-4 16-10 0-5-3-8-9-9 4-1 7-4 7-8 0-6-5-9-14-9H11Z"
+      />
+      <path
+        className="mark-spiral"
+        d="M22 14c7-3 12 1 10 6-2 5-10 5-12 0-2-6 6-11 13-7"
+      />
+      <circle className="mark-center" cx="25.5" cy="18.5" r="2.4" />
+    </svg>
   </span>
 );
 
