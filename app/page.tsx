@@ -75,7 +75,7 @@ export function ExperienceStats() {
       </div>
       <div className="experience-grid">
         <article><strong>1,250+</strong><span>hours of direct reading instruction</span></article>
-        <article><strong>80+</strong><span>teachers coached, led, or supported across four international schools</span></article>
+        <article><strong>700+</strong><span>teachers supported through coaching, leadership, and professional learning</span></article>
         <article><strong>450</strong><span>estimated planning, coaching, and leadership meetings</span></article>
         <article><strong>2,400+</strong><span>pre-service-teacher enrollments taught across 99 university classes</span></article>
       </div>
