@@ -71,6 +71,9 @@ export function ExperienceStats() {
       <div className="experience-intro">
         <p className="eyebrow light">Experience in practice</p>
         <h2 id="experience-heading">Built through years of teaching, leading, and preparing teachers.</h2>
+        <figure className="experience-photo">
+          <img src="/images/dr-jenn-classroom-blue.webp" alt="Dr. Jenn in her international school classroom" />
+        </figure>
         <p>Nine years teaching students. Six years leading instructional improvement. Nine years teaching pre-service educators at university.</p>
       </div>
       <div className="experience-grid">
