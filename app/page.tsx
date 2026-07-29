@@ -65,6 +65,25 @@ export function Footer() {
   );
 }
 
+export function ExperienceStats() {
+  return (
+    <section className="experience-stats" aria-labelledby="experience-heading">
+      <div className="experience-intro">
+        <p className="eyebrow light">Experience in practice</p>
+        <h2 id="experience-heading">Built through years of teaching, leading, and preparing teachers.</h2>
+        <p>Nine years teaching students. Six years leading instructional improvement. Nine years teaching pre-service educators at university.</p>
+      </div>
+      <div className="experience-grid">
+        <article><strong>1,250+</strong><span>hours of direct reading instruction</span></article>
+        <article><strong>80+</strong><span>teachers coached, led, or supported across four international schools</span></article>
+        <article><strong>450</strong><span>estimated planning, coaching, and leadership meetings</span></article>
+        <article><strong>2,400+</strong><span>pre-service-teacher enrollments taught across 99 university classes</span></article>
+      </div>
+      <p className="experience-note">Conservative estimates based on Jenn’s teaching schedules, documented roles, school scope, and university course record.</p>
+    </section>
+  );
+}
+
 const Questions = () => (
   <section className="questions">
     <div className="eyebrow light">Does any of this sound familiar?</div>
@@ -121,6 +140,8 @@ export default function Home() {
             <Link className="text-link" href="/about">Meet Dr. Jenn <span>→</span></Link>
           </div>
         </section>
+
+        <ExperienceStats />
 
         <section className="clarity-feature">
           <div className="clarity-card">

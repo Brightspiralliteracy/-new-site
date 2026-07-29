@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Footer, Header } from "../page";
+import { ExperienceStats, Footer, Header } from "../page";
 
 const NEXT_STEP = "/start-here";
 const STAN_STORE = "https://stan.store/brightspiralliteracy";
@@ -155,20 +155,23 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
           <Link className="button" href={target}>{page.cta} <span>↗</span></Link>
         </section>
         {slug === "about" && (
-          <section className="about-visuals" aria-label="Dr. Jenn at work">
-            <figure className="about-leadership-photo">
-              <img src="/images/dr-jenn-presentation.webp" alt="Dr. Jenn leading a professional learning session for educators" />
-              <figcaption>International school teacher and leader experience</figcaption>
-            </figure>
-            <div className="about-video-placeholder">
-              <img src="/images/dr-jenn-notebook.webp" alt="Dr. Jenn holding her notebook" />
-              <div>
-                <span>A note from Dr. Jenn</span>
-                <h2>Meet the educator behind Bright Spiral.</h2>
-                <p>Jenn’s welcome video will be added here soon.</p>
+          <>
+            <section className="about-visuals" aria-label="Dr. Jenn at work">
+              <figure className="about-leadership-photo">
+                <img src="/images/dr-jenn-presentation.webp" alt="Dr. Jenn leading a professional learning session for educators" />
+                <figcaption>International school teacher and leader experience</figcaption>
+              </figure>
+              <div className="about-video-placeholder">
+                <img src="/images/dr-jenn-notebook.webp" alt="Dr. Jenn holding her notebook" />
+                <div>
+                  <span>A note from Dr. Jenn</span>
+                  <h2>Meet the educator behind Bright Spiral.</h2>
+                  <p>Jenn’s welcome video will be added here soon.</p>
+                </div>
               </div>
-            </div>
-          </section>
+            </section>
+            <ExperienceStats />
+          </>
         )}
         <section className="inner-content">
           {page.sections.map((section, i) => (
