@@ -9,14 +9,15 @@ const Mark = () => (
   <span className="mark" aria-hidden="true">
     <svg viewBox="0 0 48 48" role="presentation" focusable="false">
       <path
-        className="mark-letter"
-        d="M11 6v36h13c10 0 16-4 16-10 0-5-3-8-9-9 4-1 7-4 7-8 0-6-5-9-14-9H11Z"
+        className="mark-page mark-page-left"
+        d="M8 11.5c5.7-2.1 11.1-1.7 16 1.2v25.8c-4.9-2.9-10.3-3.3-16-1.2V11.5Z"
       />
       <path
-        className="mark-spiral"
-        d="M22 14c7-3 12 1 10 6-2 5-10 5-12 0-2-6 6-11 13-7"
+        className="mark-page mark-page-right"
+        d="M40 11.5c-5.7-2.1-11.1-1.7-16 1.2v25.8c4.9-2.9 10.3-3.3 16-1.2V11.5Z"
       />
-      <circle className="mark-center" cx="25.5" cy="18.5" r="2.4" />
+      <path className="mark-outline" d="M8 11.5c5.7-2.1 11.1-1.7 16 1.2 4.9-2.9 10.3-3.3 16-1.2v25.8c-5.7-2.1-11.1-1.7-16 1.2-4.9-2.9-10.3-3.3-16-1.2V11.5Z" />
+      <path className="mark-fold" d="M24 12.7v25.8" />
     </svg>
   </span>
 );
