@@ -74,12 +74,11 @@ export function ExperienceStats() {
         <p>Nine years teaching students. Six years leading instructional improvement. Nine years teaching pre-service educators at university.</p>
       </div>
       <div className="experience-grid">
-        <article><strong>1,250+</strong><span>hours of direct reading instruction</span></article>
+        <article><strong>3,500+</strong><span>hours of direct reading instruction</span></article>
         <article><strong>700+</strong><span>teachers supported through coaching, leadership, and professional learning</span></article>
-        <article><strong>450</strong><span>estimated planning, coaching, and leadership meetings</span></article>
+        <article><strong>500+</strong><span>planning, coaching, and leadership meetings</span></article>
         <article><strong>2,400+</strong><span>pre-service-teacher enrollments taught across 99 university classes</span></article>
       </div>
-      <p className="experience-note">Conservative estimates based on Jenn’s teaching schedules, documented roles, school scope, and university course record.</p>
     </section>
   );
 }
