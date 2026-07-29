@@ -22,7 +22,11 @@ export const metadata: Metadata = {
     images: ["/og-image.svg"],
   },
   other: { "codex-preview": "development" },
-  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
+  icons: {
+    icon: [{ url: "/favicon-book.svg", type: "image/svg+xml" }],
+    shortcut: "/favicon-book.svg",
+    apple: "/favicon-book.svg",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
