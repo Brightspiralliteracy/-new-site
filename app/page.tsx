@@ -113,11 +113,11 @@ export default function Home() {
         <section className="authority-bridge">
           <div>
             <p className="eyebrow">Why families trust Dr. Jenn</p>
-            <h2>Expert interpretation, grounded in real classrooms.</h2>
+            <h2>Too many families are left trying to connect the dots.</h2>
           </div>
           <div>
             <p className="founder-credentials">PhD · M.S. in Educational Leadership · 15+ years in education</p>
-            <p>Dr. Jennifer Overstreet brings more than 15 years of international school teacher and leader experience across classroom teaching, school leadership, instructional coaching, and university teaching in the United States, Italy, and the Middle East.</p>
+            <p>Between assessments, school feedback, and what their child needs, parents are often handed pieces instead of a clear picture. Bright Spiral exists to bring those pieces together through expert interpretation grounded in real classrooms.</p>
             <Link className="text-link" href="/about">Meet Dr. Jenn <span>→</span></Link>
           </div>
         </section>
@@ -168,6 +168,7 @@ export default function Home() {
           <div>
             <p className="eyebrow">International by design</p>
             <h2>Your child’s context is not a footnote.</h2>
+            <p>Internationally educated families deserve literacy guidance that is as personalized and globally minded as their children’s lives.</p>
             <p>Languages, previous instruction, changing curricula, school transitions, and confidence all shape how a child becomes a reader.</p>
             <p>We never ask only, “How is this child reading?” We also ask, “How did this child become the reader they are today?”</p>
             <Link className="text-link" href="/standard">Read the Bright Spiral Standard <span>→</span></Link>
@@ -176,8 +177,8 @@ export default function Home() {
 
         <section className="founder">
           <div className="founder-photo">
-            <img src="/images/dr-jenn-teaching.webp" alt="Dr. Jenn teaching elementary students in an international school classroom" />
-            <span>Real classrooms. Real children. Real attention.</span>
+            <img src="/images/dr-jenn-workshop.webp" alt="Dr. Jenn working with educators during a professional learning session" />
+            <span>Teacher. Leader. Literacy specialist.</span>
           </div>
           <div className="founder-copy">
             <p className="eyebrow">Meet Dr. Jenn</p>
@@ -253,21 +254,13 @@ export default function Home() {
 
         <section className="standard-callout">
           <p className="eyebrow">The promise behind our work</p>
-          <h2>Literacy protects possibility. That is the standard behind every decision we make.</h2>
+          <h2>A child who becomes a confident reader gains choices.</h2>
+          <p>Literacy protects possibility. That is the standard behind every decision we make.</p>
           <Link className="button button-dark" href="/standard">Read our Standard <Arrow /></Link>
         </section>
 
-        <section className="resources">
-          <div className="resources-head"><div><p className="eyebrow">From the journal</p><h2>Read, think, move forward.</h2></div><Link className="text-link" href="/resources">View all resources <span>→</span></Link></div>
-          <div className="resource-grid">
-            <article><div className="resource-art art-a">A?</div><small>Reading development · 12 min</small><h3>What Makes a Reader?</h3><Link href="/resources/what-makes-a-reader">Read article →</Link></article>
-            <article><div className="resource-art art-b">15</div><small>From Dr. Jenn’s notebook · 7 min</small><h3>What 15 Years in Education Made Me Care Less About</h3><Link href="/resources/what-15-years-taught-me">Read article →</Link></article>
-            <article><div className="resource-art art-c">“just”</div><small>For parents · 3 min</small><h3>Everything After “They Can Read, They Just…” Matters</h3><Link href="/resources/what-makes-a-reader#everything-after-just">Read excerpt →</Link></article>
-          </div>
-        </section>
-
         <section className="final-cta">
-          <div><p className="eyebrow light">Your next step</p><h2>You do not need another opinion.<br />You need a clear path forward.</h2></div>
+          <div><p className="eyebrow light">Your next step</p><h2>You do not need another opinion.<br />You need a clear path forward.</h2><p>Helping internationally educated children become confident, capable readers by giving parents the clarity and expertise to support them.</p></div>
           <Link className="button button-yellow" href={CLARITY_CALL}>Book a Reading Clarity Call <Arrow /></Link>
         </section>
       </main>

@@ -58,12 +58,13 @@ const pages: Record<string, PageData> = {
   about: {
     eyebrow: "About Dr. Jenn",
     title: "I have spent more than 15 years paying attention to how children learn.",
-    intro: "Good literacy decisions begin with close attention to the child, the evidence, and the instruction they have received.",
+    intro: "Children deserve literacy instruction grounded in evidence, and parents deserve the clarity to know whether they are receiving it.",
     color: "blue",
     sections: [
       { title: "From classrooms to leadership, and back again", body: "Dr. Jenn brings more than 15 years of international school teacher and leader experience across classroom teaching, instructional coaching, school leadership, university teaching, assessment, and international education. She holds a Master of Science in Educational Leadership. She returned to the classroom because the best literacy thinking stays close to real children." },
-      { title: "Why Bright Spiral exists", body: "Across countries and school systems, families kept asking the same questions. Why is reading hard for my child? Should we wait? What kind of help will make a difference? Bright Spiral was built to give those families clearer answers." },
+      { title: "Why Bright Spiral exists", body: "Across countries and school systems, families kept asking the same questions. Why is reading hard for my child? Should we wait? What kind of help will make a difference? Bright Spiral was built to give internationally educated families guidance that is as personalized and globally minded as their children’s lives." },
       { title: "Expertise without distance", body: "Parents deserve plain language, honest interpretation, and practical next steps. They should leave a conversation feeling more capable, not more confused." },
+      { title: "What confident reading makes possible", body: "Every confident reader gains more than a school skill. They gain access to ideas, opportunities, and the ability to think independently." },
     ],
     cta: "Read the Bright Spiral Standard",
   },
@@ -153,6 +154,22 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
           <p>{page.intro}</p>
           <Link className="button" href={target}>{page.cta} <span>↗</span></Link>
         </section>
+        {slug === "about" && (
+          <section className="about-visuals" aria-label="Dr. Jenn at work">
+            <figure className="about-leadership-photo">
+              <img src="/images/dr-jenn-presentation.webp" alt="Dr. Jenn leading a professional learning session for educators" />
+              <figcaption>International school teacher and leader experience</figcaption>
+            </figure>
+            <div className="about-video-placeholder">
+              <img src="/images/dr-jenn-notebook.webp" alt="Dr. Jenn holding her notebook" />
+              <div>
+                <span>A note from Dr. Jenn</span>
+                <h2>Meet the educator behind Bright Spiral.</h2>
+                <p>Jenn’s welcome video will be added here soon.</p>
+              </div>
+            </div>
+          </section>
+        )}
         <section className="inner-content">
           {page.sections.map((section, i) => (
             <article key={section.title}>
