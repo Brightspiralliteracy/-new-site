@@ -81,7 +81,7 @@ export function ExperienceStats() {
         <p className="eyebrow light">Experience in practice</p>
         <h2 id="experience-heading">Built through years of teaching, leading, and preparing teachers.</h2>
         <figure className="experience-photo">
-          <img src="/images/dr-jenn-classroom-blue.webp" alt="Dr. Jenn in her international school classroom" />
+          <img src="/images/dr-jenn-workshop.webp" alt="Dr. Jenn leading a professional learning session with educators" />
         </figure>
         <p>Nine years teaching students. Six years leading instructional improvement. Nine years teaching pre-service educators at university.</p>
       </div>
@@ -152,8 +152,6 @@ export default function Home() {
           </div>
         </section>
 
-        <ExperienceStats />
-
         <section className="clarity-feature">
           <div className="clarity-card">
             <div className="card-top"><span>01</span><span>Flagship experience</span></div>
@@ -194,7 +192,6 @@ export default function Home() {
         <section className="international">
           <div className="context-visual">
             <img className="context-main-photo" src="/images/dr-jenn-teaching.webp" alt="Dr. Jenn teaching elementary students in an international school classroom" />
-            <img className="context-detail-photo" src="/images/student-writing.webp" alt="A child sharing letter and sound work during a literacy lesson" />
             <p>One child. More than one source of evidence.</p>
           </div>
           <div>
@@ -208,10 +205,6 @@ export default function Home() {
         </section>
 
         <section className="founder">
-          <div className="founder-photo">
-            <img src="/images/dr-jenn-workshop.webp" alt="Dr. Jenn working with educators during a professional learning session" />
-            <span>Teacher. Leader. Literacy specialist.</span>
-          </div>
           <div className="founder-copy">
             <p className="eyebrow">Meet Dr. Jenn</p>
             <h2>The best literacy decisions begin with close attention to the child and the evidence.</h2>
@@ -219,6 +212,10 @@ export default function Home() {
             <p>Dr. Jennifer Overstreet brings international school teacher and leader experience across classroom teaching, school leadership, instructional coaching, and university teaching in the United States, Italy, and the Middle East.</p>
             <p>She returned to the classroom because literacy ideas should remain connected to real children and how they learn.</p>
             <Link className="text-link" href="/about">More about Dr. Jenn <span>→</span></Link>
+          </div>
+          <div className="founder-photo">
+            <img src="/images/dr-jenn-presentation.webp" alt="Dr. Jenn leading professional learning for international school educators" />
+            <span>Teacher. Leader. Literacy specialist.</span>
           </div>
         </section>
 
@@ -253,11 +250,17 @@ export default function Home() {
               <p>“Since working with Jenn, his confidence is 10X.”</p>
               <cite>Parent</cite>
             </blockquote>
+            <div className="proof-next">
+              <span>What we are working toward</span>
+              <strong>More skill.<br />More confidence.<br />More independence.</strong>
+              <Link href={NEXT_STEP}>Find your child’s next step <Arrow /></Link>
+            </div>
           </div>
           <div className="proof-story">
             <div className="proof-story-copy">
               <span>An anonymized family story</span>
               <h3>From avoiding books to choosing chapter books.</h3>
+              <blockquote>“By spring break, she was choosing chapter books on her own.”</blockquote>
               <dl className="case-study-details">
                 <div><dt>Starting point</dt><dd>A Grade 1 student was reversing letters, avoiding books, and had not chosen to read independently in two years.</dd></div>
                 <div><dt>Bright Spiral’s focus</dt><dd>Look closely at the reading, identify the missing skills, and replace broad practice with targeted instruction.</dd></div>
@@ -267,7 +270,6 @@ export default function Home() {
             </div>
             <div className="proof-images">
               <img src="/images/student-writing.webp" alt="A child showing letter and sound work on a whiteboard" />
-              <img src="/images/reading-session-work.webp" alt="Student word-reading game from an online literacy session" />
             </div>
           </div>
         </section>
@@ -285,10 +287,10 @@ export default function Home() {
         </section>
 
         <section className="standard-callout">
-          <p className="eyebrow">The promise behind our work</p>
-          <h2>A child who becomes a confident reader gains choices.</h2>
-          <p>Literacy protects possibility. That is the standard behind every decision we make.</p>
-          <Link className="button button-dark" href="/standard">Read our Standard <Arrow /></Link>
+          <p className="eyebrow">The Bright Spiral Promise</p>
+          <h2>We will never reduce your child to a score.</h2>
+          <p>We seek understanding before judgment, consider the whole child before interpreting the data, and turn every finding into a clear next step. Because literacy protects possibility.</p>
+          <Link className="button button-dark" href="/standard">Read the Bright Spiral Standard <Arrow /></Link>
         </section>
 
         <section className="final-cta">
