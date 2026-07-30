@@ -251,8 +251,8 @@ export default function Home() {
               <cite>Parent</cite>
             </blockquote>
             <div className="proof-next">
-              <span>What we are working toward</span>
-              <strong>More skill.<br />More confidence.<br />More independence.</strong>
+              <span>The change that matters</span>
+              <strong>Reading gets hard. Your child knows what to do next.</strong>
               <Link href={NEXT_STEP}>Find your child’s next step <Arrow /></Link>
             </div>
           </div>
