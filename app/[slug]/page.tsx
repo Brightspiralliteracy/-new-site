@@ -162,10 +162,10 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
                 <figcaption>International school teacher and leader experience</figcaption>
               </figure>
               <div className="about-video-placeholder">
-                <img src="/images/dr-jenn-notebook.webp" alt="Dr. Jenn holding her notebook" />
+                <img src="/images/dr-jenn-classroom-blue.webp" alt="Dr. Jenn in her international school classroom" />
                 <div>
                   <span>A note from Dr. Jenn</span>
-                  <h2>Meet the educator behind Bright Spiral.</h2>
+                  <h2>Meet the founder behind Bright Spiral Literacy.</h2>
                   <p>Jenn’s welcome video will be added here soon.</p>
                 </div>
               </div>
