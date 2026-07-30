@@ -231,30 +231,25 @@ export default function Home() {
           </div>
           <div className="proof-grid">
             <blockquote>
-              <p>“You are magic when it comes to teaching reading!”</p>
+              <p>You are magic when it comes to teaching reading!</p>
               <cite>Grade 1 grandfather</cite>
             </blockquote>
             <blockquote>
-              <p>“He has had so much fun during his lessons and said that he cannot wait for his lesson tomorrow.”</p>
+              <p>He has had so much fun during his lessons and said that he cannot wait for his lesson tomorrow.</p>
               <cite>Parent of an elementary student</cite>
             </blockquote>
             <blockquote>
-              <p>“I am reading Wonder at home and a book about Egypt at school. I like reading. It takes me to a new world.”</p>
+              <p>I am reading Wonder at home and a book about Egypt at school. I like reading. It takes me to a new world.</p>
               <cite>Grade 5 student</cite>
             </blockquote>
             <blockquote>
-              <p>“My child has gone from being a resistant reader, to reading a book a day, to reading any chance she gets.”</p>
+              <p>My child has gone from being a resistant reader, to reading a book a day, to reading any chance she gets.</p>
               <cite>Parent</cite>
             </blockquote>
             <blockquote>
-              <p>“Since working with Jenn, his confidence is 10X.”</p>
+              <p>Since working with Jenn, his confidence is 10X.</p>
               <cite>Parent</cite>
             </blockquote>
-            <div className="proof-next">
-              <span>The change that matters</span>
-              <strong>Reading gets hard. Your child knows what to do next.</strong>
-              <Link href={NEXT_STEP}>Find your child’s next step <Arrow /></Link>
-            </div>
           </div>
           <div className="proof-story">
             <div className="proof-story-copy">
