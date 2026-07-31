@@ -219,7 +219,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="proof">
+        <section className="proof" id="testimonials">
           <div className="proof-heading">
             <p className="eyebrow light">What families and schools say</p>
             <h2>Progress you can see. Support children want to return to.</h2>
@@ -229,7 +229,7 @@ export default function Home() {
             <blockquote>I’m amazed at the growth Valentina has had in 2 weeks with you.</blockquote>
             <p>Rebecca, parent</p>
           </div>
-          <div className="proof-grid">
+          <div className="proof-grid" id="testimonial-grid">
             <blockquote>
               <p>You are magic when it comes to teaching reading!</p>
               <cite>Grade 1 grandfather</cite>
@@ -250,6 +250,11 @@ export default function Home() {
               <p>Since working with Jenn, his confidence is 10X.</p>
               <cite>Parent</cite>
             </blockquote>
+            <aside className="founder-quote">
+              <span>From Dr. Jenn</span>
+              <p>Reading is the vehicle. Helping kids think for themselves is the point.</p>
+              <cite>Dr. Jenn Overstreet</cite>
+            </aside>
           </div>
           <div className="proof-story">
             <div className="proof-story-copy">
