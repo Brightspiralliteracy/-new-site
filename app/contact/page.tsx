@@ -61,7 +61,7 @@ export default function Contact() {
                 <select name="inquiryType" required defaultValue="">
                   <option value="" disabled>Choose one</option>
                   <option>My child’s reading</option>
-                  <option>Reading Instruction Blueprint</option>
+                  <option>Reading Clarity Blueprint</option>
                   <option>Reading Turnaround</option>
                   <option>Private Advisory</option>
                   <option>The Parent Reading Room</option>
@@ -78,7 +78,7 @@ export default function Contact() {
             <button className="button" type="submit" disabled={status === "sending"}>{status === "sending" ? "Sending..." : "Send your inquiry"} <span>↗</span></button>
             <div aria-live="polite">
               {status === "sent" && <p className="form-status form-success">Thank you. Your inquiry is safely recorded. Dr. Jenn will reply by email.</p>}
-              {status === "error" && <p className="form-status form-error">{error} You may also email <a href="mailto:jenn@brightspiralliteracy.com">jenn@brightspiralliteracy.com</a>.</p>}
+              {status === "error" && <p className="form-status form-error">{error} You may also email <a href="mailto:hello@brightspiralliteracy.com">hello@brightspiralliteracy.com</a>.</p>}
             </div>
           </form>
           <aside className="partnership-card">

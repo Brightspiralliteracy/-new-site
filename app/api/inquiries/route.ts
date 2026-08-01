@@ -88,7 +88,7 @@ export async function POST(request: Request) {
     return Response.json({ ok: true }, { status: 201 });
   } catch {
     return Response.json(
-      { error: "Your message was not saved. Please email jenn@brightspiralliteracy.com." },
+      { error: "Your message was not saved. Please email hello@brightspiralliteracy.com." },
       { status: 500 }
     );
   }

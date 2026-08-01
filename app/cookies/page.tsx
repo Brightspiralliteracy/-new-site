@@ -26,7 +26,7 @@ export default function Cookies() {
           <p>Bright Spiral will request consent before adding non-essential analytics or advertising tools for visitors where consent is required. This page and the Privacy Policy will name each tool before it becomes active.</p>
 
           <h2>Questions</h2>
-          <p>Email <a href="mailto:jenn@brightspiralliteracy.com">jenn@brightspiralliteracy.com</a>.</p>
+          <p>Email <a href="mailto:hello@brightspiralliteracy.com">hello@brightspiralliteracy.com</a>.</p>
         </article>
       </main>
       <Footer />

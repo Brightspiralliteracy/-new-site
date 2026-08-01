@@ -4,10 +4,11 @@ import { Footer, Header } from "../page";
 
 export const metadata: Metadata = {
   title: "Reading Turnaround",
-  description: "Specialist literacy instruction built from your child’s Reading Instruction Blueprint and designed around measurable progress.",
+  description: "Private specialist literacy instruction built from your child’s Reading Clarity Blueprint.",
 };
 
-const NEXT_STEP = "https://stan.store/brightspiralliteracy";
+const BLUEPRINT = "/reading-clarity-blueprint";
+const CLARITY_CALL = "https://stan.store/brightspiralliteracy/p/reading-clarity-call";
 
 export default function ReadingTurnaround() {
   return (
@@ -20,9 +21,10 @@ export default function ReadingTurnaround() {
             <h1>Your child is working hard. Reading should not still feel this hard.</h1>
             <p className="turnaround-lede">For families who are tired of watching a bright child guess, avoid, shut down, or say, “I’m just not a reader.” Reading Turnaround teaches the missing skills in the order your child needs them.</p>
             <div className="actions">
-              <Link className="button button-yellow" href={NEXT_STEP}>Explore specialist support <span>↗</span></Link>
-              <span className="turnaround-price">Separate investment from €2,200 after the €1,200 Blueprint</span>
+              <Link className="button button-yellow" href={BLUEPRINT}>Begin with the Reading Clarity Blueprint <span>↗</span></Link>
+              <Link className="text-link light-link" href={CLARITY_CALL}>Not sure? Book a Reading Clarity Call <span>→</span></Link>
             </div>
+            <p className="turnaround-price">€2,200 to €4,800 · Separate investment after the €1,200 Blueprint</p>
           </div>
           <aside className="parent-moment">
             <p>Perhaps you know this moment.</p>
@@ -70,7 +72,7 @@ export default function ReadingTurnaround() {
               <p className="old-new-label">The Bright Spiral way</p>
               <h3>Explain the difficulty. Teach the skill. Prove the change.</h3>
               <ul>
-                <li><span>01</span><div><b>Start with the Instruction Blueprint</b><p>See the strengths, gaps, effort, behavior, language history, and instructional history together.</p></div></li>
+                <li><span>01</span><div><b>Start with the Reading Clarity Blueprint</b><p>See the strengths, gaps, effort, behavior, language history, and instructional history together.</p></div></li>
                 <li><span>02</span><div><b>Find the friction</b><p>Identify the point where accurate, confident reading begins to break down.</p></div></li>
                 <li><span>03</span><div><b>Teach what is missing</b><p>Give explicit instruction in the right skill, in the right sequence.</p></div></li>
                 <li><span>04</span><div><b>Measure transfer</b><p>Look for the learning in unfamiliar words, real books, and schoolwork.</p></div></li>
@@ -81,7 +83,7 @@ export default function ReadingTurnaround() {
           </div>
           <div className="old-new-close">
             <p>This is the difference between keeping a child busy and changing how they read.</p>
-            <Link className="button" href={NEXT_STEP}>Choose your next step <span>↗</span></Link>
+            <Link className="button" href={BLUEPRINT}>Start with the Blueprint <span>↗</span></Link>
           </div>
         </section>
 
@@ -93,7 +95,7 @@ export default function ReadingTurnaround() {
           <div className="turnaround-steps">
             <article>
               <span>01</span>
-              <div><h3>Find the friction</h3><h4>Where does reading begin to break down?</h4><p>We start with the Reading Instruction Blueprint. We identify the skills your child has, the strategies they use to compensate, and the precise point where effort begins to outweigh success.</p></div>
+              <div><h3>Find the friction</h3><h4>Where does reading begin to break down?</h4><p>We start with the Reading Clarity Blueprint. We identify the skills your child has, the strategies they use to compensate, and the precise point where effort begins to outweigh success.</p></div>
             </article>
             <article>
               <span>02</span>
@@ -128,26 +130,69 @@ export default function ReadingTurnaround() {
           <p>Rebecca, parent</p>
         </section>
 
+        <section className="turnaround-includes">
+          <div className="turnaround-includes-head">
+            <p className="eyebrow">What Reading Turnaround includes</p>
+            <h2>You know what Dr. Jenn will teach, how often your child will meet, and how progress will be reviewed before you enroll.</h2>
+            <p>Reading Turnaround is currently delivered personally by Dr. Jenn through private online instruction.</p>
+          </div>
+          <div className="turnaround-includes-grid">
+            <article><span>01</span><h3>A plan built from the RCB</h3><p>Your child’s Reading Clarity Blueprint determines the instructional priorities and the order in which they are taught.</p></article>
+            <article><span>02</span><h3>Private 30 to 45-minute lessons</h3><p>Lesson length and frequency are recommended from the RCB. Your child may meet once, twice, or more each week according to need.</p></article>
+            <article><span>03</span><h3>Monitoring during every lesson</h3><p>Dr. Jenn watches how your child responds, records the evidence, and adjusts instruction when the reading is not changing as expected.</p></article>
+            <article><span>04</span><h3>Parent updates and home guidance</h3><p>You know what your child is learning, what is changing, and how to reinforce progress without turning home into another classroom.</p></article>
+            <article><span>05</span><h3>Formal progress reviews</h3><p>Reviews follow meaningful blocks of completed lessons rather than arbitrary calendar dates. You receive a clear explanation of progress and the next instructional decision.</p></article>
+            <article><span>06</span><h3>A final review and written next step</h3><p>You finish with a summary of what changed, what still needs attention, and what should happen after Reading Turnaround.</p></article>
+          </div>
+        </section>
+
+        <section className="turnaround-scopes">
+          <div className="turnaround-scopes-intro">
+            <p className="eyebrow light">The RCB determines the scope</p>
+            <h2>Focused or Comprehensive. You do not have to choose.</h2>
+            <p>Dr. Jenn recommends the appropriate scope after completing the Reading Clarity Blueprint and explains why it fits your child.</p>
+          </div>
+          <div className="scope-grid">
+            <article>
+              <span>Focused Reading Turnaround</span>
+              <h3>One or two clearly defined instructional priorities.</h3>
+              <p>For a child whose progress is being interrupted by a specific, bounded skill or reading pattern. The work concentrates on the priority most likely to move reading forward.</p>
+              <small>Usually fewer lessons and a shorter engagement.</small>
+            </article>
+            <article>
+              <span>Comprehensive Reading Turnaround</span>
+              <h3>Several connected priorities taught in sequence.</h3>
+              <p>For a child whose phonemic awareness, decoding, fluency, comprehension, or confidence are affecting one another. The plan strengthens those areas in the order the reading evidence requires.</p>
+              <small>Usually more lessons, a longer engagement, and additional formal reviews.</small>
+            </article>
+          </div>
+        </section>
+
         <section className="turnaround-fit">
           <div>
-            <p className="eyebrow">A plan built after we understand the child</p>
-            <h2>Your child’s assessment determines the scope.</h2>
-            <p>Families do not choose between generic intervention packages. Dr. Jenn recommends the focus, sequence, frequency, and duration from your child’s Instruction Blueprint and response to instruction.</p>
+            <p className="eyebrow">Your exact recommendation comes first</p>
+            <h2>No open-ended tutoring. No package selected from a menu.</h2>
+            <p>After the RCB consultation, Dr. Jenn provides the recommended scope, lesson frequency, session length, estimated number of lessons, timeline, and fixed investment. You review the complete recommendation before deciding whether to enroll.</p>
           </div>
           <ul>
-            <li>€1,200 Reading Instruction Blueprint completed first</li>
-            <li>Individual specialist instruction</li>
-            <li>Clear instructional priorities</li>
-            <li>Progress evidence parents understand</li>
-            <li>Separate custom engagement from €2,200</li>
+            <li>€1,200 Reading Clarity Blueprint completed first</li>
+            <li>Focused or Comprehensive recommendation</li>
+            <li>Private instruction with Dr. Jenn</li>
+            <li>30 to 45-minute online lessons</li>
+            <li>Frequency based on your child’s RCB findings</li>
+            <li>Investment from €2,200 to €4,800</li>
+            <li>No credit of the Blueprint investment</li>
           </ul>
         </section>
 
         <section className="turnaround-final">
-          <p className="eyebrow light">The first conversation</p>
+          <p className="eyebrow light">Every Reading Turnaround begins with clarity</p>
           <h2>Your child has spent enough time wondering why reading feels harder for them.</h2>
-          <p>Tell Dr. Jenn what you are seeing. You will leave the discovery call knowing whether the Reading Instruction Blueprint is the right first step.</p>
-          <Link className="button button-yellow" href={NEXT_STEP}>Explore specialist support <span>↗</span></Link>
+          <p>If you already know the Reading Clarity Blueprint is the right step, begin there. If you are still deciding, book a Reading Clarity Call first.</p>
+          <div className="actions">
+            <Link className="button button-yellow" href={BLUEPRINT}>Begin with the Reading Clarity Blueprint <span>↗</span></Link>
+            <Link className="text-link light-link" href={CLARITY_CALL}>Not sure? Book a Reading Clarity Call <span>→</span></Link>
+          </div>
         </section>
       </main>
       <Footer />

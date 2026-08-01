@@ -8,8 +8,9 @@ export const metadata: Metadata = {
 };
 
 const articles = [
-  { href: "/resources/what-makes-a-reader", tag: "Reading development", time: "12 min read", title: "What Makes a Reader?", deck: "A guide to reading development for international school parents, and a better question than “Is my child a reader?”", art: "A?", className: "art-a" },
-  { href: "/resources/what-15-years-taught-me", tag: "From Dr. Jenn’s notebook", time: "7 min read", title: "What 15 Years in Education Made Me Care Less About", deck: "The polished performance is not always the useful evidence. Here is what I watch instead.", art: "15", className: "art-b" },
+  { href: "/resources/what-makes-a-reader", tag: "Reading development", time: "12 min read", title: "What Makes a Reader?", deck: "A guide to reading development for international school parents, and a better question than “Is my child a reader?”", image: "/images/dr-jenn-presentation.webp", alt: "Dr. Jenn presenting student learning during a professional education session", label: "Reading, closely observed" },
+  { href: "/resources/what-15-years-taught-me", tag: "From Dr. Jenn’s notebook", time: "7 min read", title: "What 15 Years in Education Made Me Care Less About", deck: "The polished performance is not always the useful evidence. Here is what I watch instead.", image: "/images/dr-jenn-workshop.webp", alt: "Dr. Jenn in conversation with educators during a workshop", label: "Lessons from the classroom" },
+  { href: "/resources/what-makes-a-reader#everything-after-just", tag: "For parents", time: "3 min read", title: "Everything After “They Can Read, They Just…” Matters", deck: "The words after “just” often point toward the part of reading a child has not yet made secure.", image: "/images/dr-jenn-classroom-denim.webp", alt: "Dr. Jenn in an elementary classroom surrounded by student work", label: "What parents notice" },
 ];
 
 export default function Resources() {
@@ -20,12 +21,15 @@ export default function Resources() {
         <section className="journal-hero">
           <p className="eyebrow">The Bright Spiral Journal</p>
           <h1>Clear thinking for families raising readers.</h1>
-          <p>No generic checklists. No panic. Just careful explanations of what reading asks children to do, what parents might notice, and which questions are worth asking next.</p>
+          <p>Careful explanations of what reading asks children to do, what parents might notice, and which questions are worth asking next.</p>
         </section>
         <section className="journal-list">
           {articles.map((article, index) => (
             <article className="journal-card" key={article.href}>
-              <Link className={`resource-art ${article.className}`} href={article.href}>{article.art}</Link>
+              <Link className="journal-image" href={article.href}>
+                <img src={article.image} alt={article.alt} />
+                <span>{article.label}</span>
+              </Link>
               <div>
                 <p className="journal-meta">{article.tag}<span>{article.time}</span></p>
                 <h2><Link href={article.href}>{article.title}</Link></h2>

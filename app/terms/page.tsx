@@ -38,7 +38,7 @@ export default function Terms() {
           <p>Italian law governs these website terms, subject to mandatory consumer protections which apply in your country of residence.</p>
 
           <h2>Questions</h2>
-          <p>Email <a href="mailto:jenn@brightspiralliteracy.com">jenn@brightspiralliteracy.com</a>.</p>
+          <p>Email <a href="mailto:hello@brightspiralliteracy.com">hello@brightspiralliteracy.com</a>.</p>
         </article>
       </main>
       <Footer />

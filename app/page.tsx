@@ -1,14 +1,24 @@
 import Link from "next/link";
 
 const Arrow = () => <span aria-hidden="true">↗</span>;
-const NEXT_STEP = "https://stan.store/brightspiralliteracy";
+const NEXT_STEP = "/start-here";
 const STAN_STORE = "https://stan.store/brightspiralliteracy";
+const CLARITY_CALL = "https://stan.store/brightspiralliteracy/p/reading-clarity-call";
 
 const Mark = () => (
   <span className="mark" aria-hidden="true">
-    <i />
-    <i />
-    <i />
+    <svg viewBox="0 0 48 48" role="presentation" focusable="false">
+      <path
+        className="mark-page mark-page-left"
+        d="M8 11.5c5.7-2.1 11.1-1.7 16 1.2v25.8c-4.9-2.9-10.3-3.3-16-1.2V11.5Z"
+      />
+      <path
+        className="mark-page mark-page-right"
+        d="M40 11.5c-5.7-2.1-11.1-1.7-16 1.2v25.8c4.9-2.9 10.3-3.3 16-1.2V11.5Z"
+      />
+      <path className="mark-outline" d="M8 11.5c5.7-2.1 11.1-1.7 16 1.2 4.9-2.9 10.3-3.3 16-1.2v25.8c-5.7-2.1-11.1-1.7-16 1.2-4.9-2.9-10.3-3.3-16-1.2V11.5Z" />
+      <path className="mark-fold" d="M24 12.7v25.8" />
+    </svg>
   </span>
 );
 
@@ -55,12 +65,33 @@ export function Footer() {
           <p>Literacy support designed for international school families.</p>
         </div>
         <div className="footer-links">
-          <div><b>Explore</b><Link href="/start-here">Start here</Link><Link href="/services">Ways to work together</Link><Link href="/reading-instruction-blueprint">Reading Instruction Blueprint</Link><Link href="/reading-turnaround">Reading Turnaround</Link><Link href={STAN_STORE}>Parent Reading Room</Link><Link href="/private-advisory">Private Advisory</Link></div>
+          <div><b>Explore</b><Link href="/start-here">Start here</Link><Link href="/services">Ways to work together</Link><Link href="/reading-clarity-blueprint">Reading Clarity Blueprint</Link><Link href="/reading-turnaround">Reading Turnaround</Link><Link href={STAN_STORE}>Parent Reading Room</Link><Link href="/private-advisory">Private Advisory</Link></div>
           <div><b>Company</b><Link href="/about">About Dr. Jenn</Link><Link href="/standard">Our Standard</Link><Link href="/resources">Resources</Link><Link href="/contact">Contact</Link></div>
         </div>
       </div>
       <div className="footer-bottom"><span>© 2026 Bright Spiral Literacy</span><span className="legal-links"><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><Link href="/cookies">Cookie settings</Link></span></div>
     </footer>
+  );
+}
+
+export function ExperienceStats() {
+  return (
+    <section className="experience-stats" aria-labelledby="experience-heading">
+      <div className="experience-intro">
+        <p className="eyebrow light">Experience in practice</p>
+        <h2 id="experience-heading">Built through years of teaching, leading, and preparing teachers.</h2>
+        <figure className="experience-photo">
+          <img src="/images/dr-jenn-workshop.webp" alt="Dr. Jenn leading a professional learning session with educators" />
+        </figure>
+        <p>Nine years teaching students. Six years leading instructional improvement. Nine years teaching pre-service educators at university.</p>
+      </div>
+      <div className="experience-grid">
+        <article><strong>3,500+</strong><span>hours of direct reading instruction</span></article>
+        <article><strong>700+</strong><span>teachers supported through coaching, leadership, and professional learning</span></article>
+        <article><strong>500+</strong><span>planning, coaching, and leadership meetings</span></article>
+        <article><strong>2,400+</strong><span>pre-service-teacher enrollments taught across 99 university classes</span></article>
+      </div>
+    </section>
   );
 }
 
@@ -92,7 +123,7 @@ export default function Home() {
             </div>
             <div className="hero-proof">
               <span>15+ years in education</span>
-              <span>International school expertise</span>
+              <span>International school teacher and leader experience</span>
               <span>Evidence-informed</span>
             </div>
           </div>
@@ -112,11 +143,11 @@ export default function Home() {
         <section className="authority-bridge">
           <div>
             <p className="eyebrow">Why families trust Dr. Jenn</p>
-            <h2>Expert interpretation, grounded in real classrooms.</h2>
+            <h2>Too many families are left trying to connect the dots.</h2>
           </div>
           <div>
-            <p className="founder-credentials">PhD · M.Ed. · 15+ years in education</p>
-            <p>Dr. Jennifer Overstreet has worked across classroom teaching, school leadership, instructional coaching, and university teaching in the United States, Italy, and the Middle East.</p>
+            <p className="founder-credentials">PhD · M.S. in Educational Leadership · 15+ years in education</p>
+            <p>Between assessments, school feedback, and what their child needs, parents are often handed pieces instead of a clear picture. Bright Spiral exists to bring those pieces together through expert interpretation grounded in real classrooms.</p>
             <Link className="text-link" href="/about">Meet Dr. Jenn <span>→</span></Link>
           </div>
         </section>
@@ -124,10 +155,10 @@ export default function Home() {
         <section className="clarity-feature">
           <div className="clarity-card">
             <div className="card-top"><span>01</span><span>Flagship experience</span></div>
-            <h2>Reading Instruction Blueprint</h2>
+            <h2>Reading Clarity Blueprint</h2>
             <p>A complete instructional decision process for families who need to know how their child reads and what should happen next.</p>
             <div className="price">€1,200 <small>one-time investment</small></div>
-            <Link className="button button-yellow" href={NEXT_STEP}>Explore the Blueprint <Arrow /></Link>
+            <Link className="button button-yellow" href="/reading-clarity-blueprint">Explore the Blueprint <Arrow /></Link>
           </div>
           <div className="clarity-copy">
             <p className="eyebrow">From uncertainty to a clear plan</p>
@@ -135,10 +166,11 @@ export default function Home() {
             <p>Dr. Jenn brings the evidence, the reading itself, and your child’s educational and language history into one coherent instructional picture.</p>
             <ul className="check-list">
               <li>Two individual assessment sessions</li>
-              <li>A parent-friendly Instruction Blueprint</li>
+              <li>A parent-friendly Reading Profile</li>
+              <li>A Personalized Eight-Week Reading Support Plan</li>
               <li>A consultation with Dr. Jenn</li>
               <li>Priorities organized by first, next, and later</li>
-              <li>A summary to share with your child’s school</li>
+              <li>A one-page teacher summary</li>
             </ul>
           </div>
         </section>
@@ -158,14 +190,14 @@ export default function Home() {
         </section>
 
         <section className="international">
-          <div className="map-art" aria-hidden="true">
-            <span className="dot d1" /><span className="dot d2" /><span className="dot d3" />
-            <i className="route r1" /><i className="route r2" />
-            <div className="stacked-books"><b>HOME</b><b>SCHOOL</b><b>LANGUAGE</b></div>
+          <div className="context-visual">
+            <img className="context-main-photo" src="/images/dr-jenn-teaching.webp" alt="Dr. Jenn teaching elementary students in an international school classroom" />
+            <p>One child. More than one source of evidence.</p>
           </div>
           <div>
             <p className="eyebrow">International by design</p>
             <h2>Your child’s context is not a footnote.</h2>
+            <p>Internationally educated families deserve literacy guidance that is as personalized and globally minded as their children’s lives.</p>
             <p>Languages, previous instruction, changing curricula, school transitions, and confidence all shape how a child becomes a reader.</p>
             <p>We never ask only, “How is this child reading?” We also ask, “How did this child become the reader they are today?”</p>
             <Link className="text-link" href="/standard">Read the Bright Spiral Standard <span>→</span></Link>
@@ -173,21 +205,21 @@ export default function Home() {
         </section>
 
         <section className="founder">
-          <div className="founder-photo">
-            <img src="/images/dr-jenn-teaching.webp" alt="Dr. Jenn teaching elementary students in an international school classroom" />
-            <span>Real classrooms. Real children. Real attention.</span>
-          </div>
           <div className="founder-copy">
             <p className="eyebrow">Meet Dr. Jenn</p>
-            <h2>“When something works for a child, I pay attention. When it doesn’t, I pay attention to that too.”</h2>
-            <p className="founder-credentials">PhD · M.Ed. · 15+ years in education</p>
-            <p>Dr. Jennifer Overstreet’s work spans classroom teaching, school leadership, instructional coaching, and university teaching across the United States, Italy, and the Middle East.</p>
+            <h2>The best literacy decisions begin with close attention to the child and the evidence.</h2>
+            <p className="founder-credentials">PhD · M.S. in Educational Leadership · 15+ years in education</p>
+            <p>Dr. Jennifer Overstreet brings international school teacher and leader experience across classroom teaching, school leadership, instructional coaching, and university teaching in the United States, Italy, and the Middle East.</p>
             <p>She returned to the classroom because literacy ideas should remain connected to real children and how they learn.</p>
             <Link className="text-link" href="/about">More about Dr. Jenn <span>→</span></Link>
           </div>
+          <div className="founder-photo">
+            <img src="/images/dr-jenn-presentation.webp" alt="Dr. Jenn leading professional learning for international school educators" />
+            <span>Teacher. Leader. Literacy specialist.</span>
+          </div>
         </section>
 
-        <section className="proof">
+        <section className="proof" id="testimonials">
           <div className="proof-heading">
             <p className="eyebrow light">What families and schools say</p>
             <h2>Progress you can see. Support children want to return to.</h2>
@@ -197,24 +229,38 @@ export default function Home() {
             <blockquote>I’m amazed at the growth Valentina has had in 2 weeks with you.</blockquote>
             <p>Rebecca, parent</p>
           </div>
-          <div className="proof-grid">
+          <div className="proof-grid" id="testimonial-grid">
             <blockquote>
-              <p>“You are magic when it comes to teaching reading!”</p>
-              <cite>Grade 1 parent</cite>
+              <p>You are magic when it comes to teaching reading!</p>
+              <cite>Grade 1 grandfather</cite>
             </blockquote>
             <blockquote>
-              <p>“He has had so much fun during his lessons and said that he cannot wait for his lesson tomorrow.”</p>
+              <p>He has had so much fun during his lessons and said that he cannot wait for his lesson tomorrow.</p>
               <cite>Parent of an elementary student</cite>
             </blockquote>
             <blockquote>
-              <p>“I am reading Wonder at home and a book about Egypt at school. I like reading. It takes me to a new world.”</p>
+              <p>I am reading Wonder at home and a book about Egypt at school. I like reading. It takes me to a new world.</p>
               <cite>Grade 5 student</cite>
             </blockquote>
+            <blockquote>
+              <p>My child has gone from being a resistant reader, to reading a book a day, to reading any chance she gets.</p>
+              <cite>Parent</cite>
+            </blockquote>
+            <blockquote>
+              <p>Since working with Jenn, his confidence is 10X.</p>
+              <cite>Parent</cite>
+            </blockquote>
+            <aside className="founder-quote">
+              <span>From Dr. Jenn</span>
+              <p>Reading is the vehicle. Helping kids think for themselves is the point.</p>
+              <cite>Dr. Jenn Overstreet</cite>
+            </aside>
           </div>
           <div className="proof-story">
             <div className="proof-story-copy">
               <span>An anonymized family story</span>
               <h3>From avoiding books to choosing chapter books.</h3>
+              <blockquote>“By spring break, she was choosing chapter books on her own.”</blockquote>
               <dl className="case-study-details">
                 <div><dt>Starting point</dt><dd>A Grade 1 student was reversing letters, avoiding books, and had not chosen to read independently in two years.</dd></div>
                 <div><dt>Bright Spiral’s focus</dt><dd>Look closely at the reading, identify the missing skills, and replace broad practice with targeted instruction.</dd></div>
@@ -224,7 +270,6 @@ export default function Home() {
             </div>
             <div className="proof-images">
               <img src="/images/student-writing.webp" alt="A child showing letter and sound work on a whiteboard" />
-              <img src="/images/reading-session-work.webp" alt="Student word-reading game from an online literacy session" />
             </div>
           </div>
         </section>
@@ -236,29 +281,21 @@ export default function Home() {
           </div>
           <div className="path-grid">
             <article className="path-blue"><span>01</span><h3>I have questions and want trusted guidance.</h3><p>Learn what matters, ask better questions, and get support between school meetings.</p><Link href={STAN_STORE}>The Parent Reading Room <Arrow /></Link></article>
-            <article className="path-yellow"><span>02</span><h3>I need to know what my child needs.</h3><p>Understand how your child reads and which instruction belongs first, next, and later.</p><Link href="/reading-instruction-blueprint">Reading Instruction Blueprint <Arrow /></Link></article>
+            <article className="path-yellow"><span>02</span><h3>I need to know what my child needs.</h3><p>Understand how your child reads and which instruction belongs first, next, and later.</p><Link href="/reading-clarity-blueprint">Reading Clarity Blueprint <Arrow /></Link></article>
             <article className="path-cream"><span>03</span><h3>I want Dr. Jenn to teach my child.</h3><p>Move from understanding the problem to focused teaching and measurable progress.</p><Link href="/reading-turnaround">Reading Turnaround <Arrow /></Link></article>
           </div>
         </section>
 
         <section className="standard-callout">
-          <p className="eyebrow">The promise behind our work</p>
-          <h2>Literacy protects possibility. That is the standard behind every decision we make.</h2>
-          <Link className="button button-dark" href="/standard">Read our Standard <Arrow /></Link>
-        </section>
-
-        <section className="resources">
-          <div className="resources-head"><div><p className="eyebrow">From the journal</p><h2>Read, think, move forward.</h2></div><Link className="text-link" href="/resources">View all resources <span>→</span></Link></div>
-          <div className="resource-grid">
-            <article><div className="resource-art art-a">A?</div><small>Reading development · 12 min</small><h3>What Makes a Reader?</h3><Link href="/resources/what-makes-a-reader">Read article →</Link></article>
-            <article><div className="resource-art art-b">15</div><small>From Dr. Jenn’s notebook · 7 min</small><h3>What 15 Years in Education Made Me Care Less About</h3><Link href="/resources/what-15-years-taught-me">Read article →</Link></article>
-            <article><div className="resource-art art-c">“just”</div><small>For parents · 3 min</small><h3>Everything After “They Can Read, They Just…” Matters</h3><Link href="/resources/what-makes-a-reader#everything-after-just">Read excerpt →</Link></article>
-          </div>
+          <p className="eyebrow">The Bright Spiral Promise</p>
+          <h2>We will never reduce your child to a score.</h2>
+          <p>We seek understanding before judgment, consider the whole child before interpreting the data, and turn every finding into a clear next step. Because literacy protects possibility.</p>
+          <Link className="button button-dark" href="/standard">Read the Bright Spiral Standard <Arrow /></Link>
         </section>
 
         <section className="final-cta">
-          <div><p className="eyebrow light">Your next step</p><h2>You do not need another opinion.<br />You need a clear path forward.</h2></div>
-          <Link className="button button-yellow" href={NEXT_STEP}>Choose your next step <Arrow /></Link>
+          <div><p className="eyebrow light">Your next step</p><h2>You do not need another opinion.<br />You need a clear path forward.</h2><p>Helping internationally educated children become confident, capable readers by giving parents the clarity and expertise to support them.</p></div>
+          <Link className="button button-yellow" href={CLARITY_CALL}>Book a Reading Clarity Call <Arrow /></Link>
         </section>
       </main>
       <Footer />

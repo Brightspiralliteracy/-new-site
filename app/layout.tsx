@@ -22,7 +22,11 @@ export const metadata: Metadata = {
     images: ["/og-image.svg"],
   },
   other: { "codex-preview": "development" },
-  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
+  icons: {
+    icon: [{ url: "/favicon-book.svg", type: "image/svg+xml" }],
+    shortcut: "/favicon-book.svg",
+    apple: "/favicon-book.svg",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -34,7 +38,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         "@id": "https://brightspiralliteracy.com/#organization",
         name: "Bright Spiral Literacy",
         url: "https://brightspiralliteracy.com",
-        email: "jenn@brightspiralliteracy.com",
+        email: "hello@brightspiralliteracy.com",
         founder: { "@id": "https://brightspiralliteracy.com/#jennifer-overstreet" },
         areaServed: "Worldwide",
         audience: "International school families with children ages 5 to 11",

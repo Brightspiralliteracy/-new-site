@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Footer, Header } from "../page";
+import { ExperienceStats, Footer, Header } from "../page";
 
-const NEXT_STEP = "https://stan.store/brightspiralliteracy";
+const NEXT_STEP = "/start-here";
 const STAN_STORE = "https://stan.store/brightspiralliteracy";
 
 type PageData = {
@@ -21,8 +21,8 @@ const pages: Record<string, PageData> = {
     intro: "You do not need to understand every literacy term before taking the next step. Start with the question closest to yours.",
     color: "yellow",
     sections: [
-      { title: "“I need to understand why reading feels hard.”", body: "The Reading Instruction Blueprint brings together evidence, context, and professional interpretation. You leave with ordered instructional priorities.", items: ["Best first step when progress has stalled", "Designed for international and multilingual families", "Investment: €1,200"] },
-      { title: "“We already know what needs teaching.”", body: "Reading Turnaround puts the Blueprint into practice through individualized specialist instruction.", items: ["Custom engagement from €2,200", "Focused on the skills which matter now", "Progress you understand and track"] },
+      { title: "“I need to understand why reading feels hard.”", body: "The Reading Clarity Blueprint brings together evidence, context, and professional interpretation. You leave with a parent-friendly Reading Profile and a Personalized Eight-Week Reading Support Plan.", items: ["Best first step when progress has stalled", "Designed for international and multilingual families", "Investment: €1,200"] },
+      { title: "“We already know what needs teaching.”", body: "Reading Turnaround puts the Blueprint into practice through individualized specialist instruction.", items: ["Custom engagement from €2,200 to €4,800", "Focused on the skills which matter now", "Progress you understand and track"] },
       { title: "“I want guidance before assessment.”", body: "The Parent Reading Room gives international school parents a trusted place to learn, ask questions, and make more confident literacy decisions.", items: ["Live Q&A and short trainings", "Practical home support", "$39 per month"] },
     ],
     cta: "Explore the Blueprint",
@@ -30,10 +30,10 @@ const pages: Record<string, PageData> = {
   "reading-turnaround": {
     eyebrow: "Reading Turnaround",
     title: "A roadmap is useful when it changes what happens next.",
-    intro: "Reading Turnaround implements your child’s Instruction Blueprint through private specialist instruction.",
+    intro: "Reading Turnaround implements your child’s Reading Clarity Blueprint through private specialist instruction.",
     color: "dark",
     sections: [
-      { title: "The Blueprint determines the path", body: "Families do not shop between generic intervention packages. Dr. Jenn recommends the scope, sequence, frequency, and duration from your child’s Instruction Blueprint.", items: ["Separate custom engagement from €2,200", "€1,200 Reading Instruction Blueprint required first", "Clear goals and progress indicators"] },
+      { title: "The Blueprint determines the path", body: "Families do not shop between generic intervention packages. Dr. Jenn recommends the scope, sequence, frequency, and duration from your child’s Reading Clarity Blueprint.", items: ["Separate custom engagement from €2,200 to €4,800", "€1,200 Reading Clarity Blueprint required first", "Clear goals and progress indicators"] },
       { title: "Find the friction", body: "Identify the point where accurate, confident reading begins to break down." },
       { title: "Teach what is missing", body: "Target the highest-priority skill in a deliberate instructional sequence." },
       { title: "Measure the change", body: "Look for new learning in unfamiliar words, books, and schoolwork." },
@@ -43,26 +43,28 @@ const pages: Record<string, PageData> = {
   },
   "parent-reading-room": {
     eyebrow: "The Parent Reading Room",
-    title: "Helping your child read should feel less overwhelming.",
-    intro: "A private community where international school parents get trusted guidance, practical support, and a place to ask their real questions.",
+    title: "Become the parent who knows what to do next.",
+    intro: "A $39-per-month membership where international school parents learn what matters, ask better questions, and make more confident literacy decisions.",
     color: "yellow",
     sections: [
-      { title: "Become a confident literacy decision-maker", body: "You do not need to become your child’s reading teacher. You need to know what matters, what does not, and when to ask for more support." },
-      { title: "Inside the Room", body: "Everything is designed to help you make better decisions and support reading without turning home into another classroom.", items: ["Live parent Q&A sessions", "Short, practical trainings", "Monthly text sets", "Book and resource recommendations", "Support for school conversations", "An international parent community"] },
-      { title: "A place to connect, not another course to finish", body: "Ask questions as they arise. Learn from other families. Return to the resources when you need them. Membership is $39 per month." },
-      { title: "Where it fits", body: "The Parent Reading Room supports families who want ongoing guidance. It does not replace an individual assessment or intervention when a child needs personalized support." },
+      { title: "Your first 30 days have a clear purpose", body: "Understand what matters most in your child’s reading, know what to ask the school, and leave with one useful action for home. You do not need to become the tutor. You need enough understanding to make sound decisions." },
+      { title: "What your membership includes", body: "The Room gives you practical guidance for the reading questions international school families face.", items: ["One live group office hour each month", "Short parent trainings and a focused resource library", "School-conversation frameworks", "Multilingual reading guidance", "Home-practice ideas which do not turn home into another classroom", "Book and learning-tool recommendations", "Weekly discussion prompts and a weekly wins thread", "Peer discussion with international school parents"] },
+      { title: "Bring the questions which appear between school meetings", body: "Ask about reading development, assessment results, intervention, multilingualism, school transitions, or when to push for more support. Dr. Jenn responds to community questions within two working days." },
+      { title: "What the Room does not include", body: "The Parent Reading Room provides general education and group guidance. It does not include an individual diagnosis, full assessment interpretation, a personalized intervention plan, private-message consultation, or tutoring. Families needing an individual instructional review begin with the Reading Clarity Blueprint." },
+      { title: "$39 per month. One clear level of support.", body: "There are no course tiers or content requirements. Join for ongoing guidance, use the live and written support you need, and return to the library when a new question appears." },
     ],
     cta: "Join The Parent Reading Room",
   },
   about: {
     eyebrow: "About Dr. Jenn",
     title: "I have spent more than 15 years paying attention to how children learn.",
-    intro: "When something works for a child, I pay attention. When it does not, I pay attention to that too. Then I return to the research to understand why.",
+    intro: "Children deserve literacy instruction grounded in evidence, and parents deserve the clarity to know whether they are receiving it.",
     color: "blue",
     sections: [
-      { title: "From classrooms to leadership, and back again", body: "Dr. Jenn’s work spans classroom teaching, instructional coaching, school leadership, university teaching, assessment, and international education. She returned to the classroom because the best literacy thinking stays close to real children." },
-      { title: "Why Bright Spiral exists", body: "Across countries and school systems, families kept asking the same questions. Why is reading hard for my child? Should we wait? What kind of help will make a difference? Bright Spiral was built to give those families clearer answers." },
+      { title: "From classrooms to leadership, and back again", body: "Dr. Jenn brings more than 15 years of international school teacher and leader experience across classroom teaching, instructional coaching, school leadership, university teaching, assessment, and international education. She holds a Master of Science in Educational Leadership. She returned to the classroom because the best literacy thinking stays close to real children." },
+      { title: "Why Bright Spiral exists", body: "Across countries and school systems, families kept asking the same questions. Why is reading hard for my child? Should we wait? What kind of help will make a difference? Bright Spiral was built to give internationally educated families guidance that is as personalized and globally minded as their children’s lives." },
       { title: "Expertise without distance", body: "Parents deserve plain language, honest interpretation, and practical next steps. They should leave a conversation feeling more capable, not more confused." },
+      { title: "What confident reading makes possible", body: "Every confident reader gains more than a school skill. They gain access to ideas, opportunities, and the ability to think independently." },
     ],
     cta: "Read the Bright Spiral Standard",
   },
@@ -100,7 +102,7 @@ const pages: Record<string, PageData> = {
     intro: "Share the question which brought you here. We will point you toward the most appropriate next step.",
     color: "blue",
     sections: [
-      { title: "For family questions", body: "Email jenn@brightspiralliteracy.com with your child’s age, school context, and the reading concern you want to understand." },
+      { title: "For family questions", body: "Email hello@brightspiralliteracy.com with your child’s age, school context, and the reading concern you want to understand." },
       { title: "For brand partnerships", body: "Have a book, tool, or service that would benefit international school families? Tell us who it serves, what problem it solves, and why it fits the Bright Spiral community." },
       { title: "A useful first message", body: "You do not need to send every report immediately. Start with what you have noticed, what the school has shared, and what you have already tried." },
     ],
@@ -112,11 +114,11 @@ const pages: Record<string, PageData> = {
     intro: "Straight answers about assessment, multilingual learners, online sessions, and what happens next.",
     color: "yellow",
     sections: [
-      { title: "Does the Reading Instruction Blueprint provide a diagnosis?", body: "No. It is an instructional decision process. It explains reading strengths, learning gaps, and recommended next steps." },
+      { title: "Does the Reading Clarity Blueprint provide a diagnosis?", body: "No. It is an instructional decision process. It explains reading strengths, learning gaps, and recommended next steps." },
       { title: "Is this appropriate for multilingual children?", body: "Yes. Language and educational history form part of the assessment context from the beginning." },
       { title: "How do online assessment sessions work?", body: "Your child meets individually with Dr. Jenn for two 45-minute sessions. You receive preparation guidance before the first meeting." },
       { title: "Do we need the Blueprint before Reading Turnaround?", body: "Yes. The Blueprint determines the most appropriate intervention scope and priorities." },
-      { title: "Does the Parent Reading Room replace individual support?", body: "No. It provides parent education and community. Individual concerns requiring personalized review begin with the Reading Instruction Blueprint." },
+      { title: "Does the Parent Reading Room replace individual support?", body: "No. It provides parent education and community. Individual concerns requiring personalized review begin with the Reading Clarity Blueprint." },
     ],
     cta: "Book the Blueprint",
   },
@@ -140,7 +142,7 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
     : page.cta.includes("Standard")
       ? "/standard"
       : page.cta.includes("Email")
-        ? "mailto:jenn@brightspiralliteracy.com"
+        ? "mailto:hello@brightspiralliteracy.com"
         : NEXT_STEP;
   return (
     <>
@@ -152,6 +154,25 @@ export default async function ContentPage({ params }: { params: Promise<{ slug: 
           <p>{page.intro}</p>
           <Link className="button" href={target}>{page.cta} <span>↗</span></Link>
         </section>
+        {slug === "about" && (
+          <>
+            <section className="about-visuals" aria-label="Dr. Jenn at work">
+              <figure className="about-leadership-photo">
+                <img src="/images/dr-jenn-presentation.webp" alt="Dr. Jenn leading a professional learning session for educators" />
+                <figcaption>International school teacher and leader experience</figcaption>
+              </figure>
+              <div className="about-video-placeholder">
+                <img src="/images/dr-jenn-classroom-blue.webp" alt="Dr. Jenn in her international school classroom" />
+                <div>
+                  <span>A note from Dr. Jenn</span>
+                  <h2>Meet the founder behind Bright Spiral Literacy.</h2>
+                  <p>Jenn’s welcome video will be added here soon.</p>
+                </div>
+              </div>
+            </section>
+            <ExperienceStats />
+          </>
+        )}
         <section className="inner-content">
           {page.sections.map((section, i) => (
             <article key={section.title}>

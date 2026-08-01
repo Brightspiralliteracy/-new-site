@@ -42,17 +42,17 @@ const questions = [
 const results: Record<string, Result> = {
   clarity: {
     eyebrow: "Your strongest next step",
-    title: "Start with the Reading Instruction Blueprint.",
-    body: "A discovery call will help us talk through what you are seeing and decide whether a complete instructional review fits your family.",
+    title: "Start with the Reading Clarity Blueprint.",
+    body: "If you already know you want a complete instructional review, begin with the Blueprint. If you are still deciding, book a Reading Clarity Call first.",
     action: "Explore the Blueprint",
-    href: "https://stan.store/brightspiralliteracy",
+    href: "/reading-clarity-blueprint",
   },
   turnaround: {
     eyebrow: "Your strongest next step",
-    title: "Talk with Dr. Jenn about specialist support.",
-    body: "Reading Turnaround begins with a clear understanding of the child. A discovery call will help us review what you already know and identify the right starting point.",
-    action: "Explore specialist support",
-    href: "https://stan.store/brightspiralliteracy",
+    title: "Begin with the Reading Clarity Blueprint.",
+    body: "Every Reading Turnaround begins with the RCB because Dr. Jenn uses the findings to recommend the focus, frequency, session length, timeline, and fixed investment.",
+    action: "Explore the Blueprint",
+    href: "/reading-clarity-blueprint",
   },
   room: {
     eyebrow: "Your strongest next step",
