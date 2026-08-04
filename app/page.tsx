@@ -59,7 +59,7 @@ export function Footer() {
           <div><b>Company</b><Link href="/about">About Dr. Jenn</Link><Link href="/standard">Our Standard</Link><Link href="/resources">Resources</Link><Link href="/contact">Contact</Link></div>
         </div>
       </div>
-      <div className="footer-bottom"><span>© 2026 Bright Spiral Literacy</span><span className="legal-links"><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><Link href="/cookies">Cookie settings</Link></span></div>
+      <div className="footer-bottom"><span>© 2026 Bright Spiral Literacy</span><span className="legal-links"><Link href="/privacy">Privacy Policy</Link><Link href="/terms">Client Terms</Link><Link href="/cookies">Cookie settings</Link></span></div>
     </footer>
   );
 }
